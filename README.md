@@ -4,8 +4,6 @@ Desktop application for the TaskManager project, built with WPF and .NET.
 
 This app lets you manage daily tasks through a simple graphical interface: create tasks, list them, and delete them. Data is persisted locally with SQLite via Entity Framework Core.
 
-## Screenshot
-
 ![Desktop screenshot](docs/screenshots/desktop.png)
 
 ## Features
