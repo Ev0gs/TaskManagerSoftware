@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using Microsoft.EntityFrameworkCore;
 
 namespace TaskManagerApp
 {
@@ -11,15 +12,12 @@ namespace TaskManagerApp
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            base.OnStartup(e);
-
             using (var db = DBContextFactory.Create())
             {
-                db.Database.EnsureCreated();
+                db.Database.Migrate();
             }
 
-            var mainWindow = new MainWindow();
-            mainWindow.Show();
+            base.OnStartup(e);
         }
     }
 }
